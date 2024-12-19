@@ -4,10 +4,13 @@ import  { DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE, DB_PORT } from './config.j
 const { Pool } = pg;
 
 export const pool = new Pool({
-    user: DB_USER || 'postgres',
-    host: DB_HOST || 'localhost',
-    database: DB_DATABASE || 'lab_cero',
-    password: DB_PASSWORD || 'Leroi24',    
-    port: DB_PORT || 5432,
+    user: "postgres",
+    host: "databaselab0.chu0w0iw8ubf.us-east-2.rds.amazonaws.com" ,
+    database: "postgres" ,
+    password: "admin12345.",    
+    port: 5432 ,
+    ssl: {
+        rejectUnauthorized: false // Deshabilitar validación del certificado (opcional, para desarrollo)
+    }
 });
 
