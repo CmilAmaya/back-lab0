@@ -1,12 +1,14 @@
 import express from 'express' 
 import cors from 'cors';
 import {PORT} from './config.js'
+import dotenv from 'dotenv'
 
 const app = express();
+dotenv.config();
 
 //cors
 const corsOptions = {
-    origin: ['http://localhost:3000', 'http://localhost:3001'], // Agrega aquí los puertos permitidos
+    origin: ['http://localhost:3000', 'http://localhost:3001'], 
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
   };

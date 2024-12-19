@@ -7,7 +7,7 @@ export const pool = new Pool({
     user: DB_USER || 'postgres',
     host: DB_HOST || 'localhost',
     database: DB_DATABASE || 'lab_cero',
-    password:'Leroi24',    
+    password: DB_PASSWORD || 'Leroi24',    
     port: DB_PORT || 5432,
 });
 
